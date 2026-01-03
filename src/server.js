@@ -2,9 +2,11 @@ import express from 'express'
 import { errorHandler } from './middlewares/errorHanlder.middlewar.js'
 import userRouters from './routes/user.routes.js'
 import morgan from 'morgan'
+import cors from 'cors'
 
 const app = express()
 
+app.use(cors())   
 app.use(express.json())
 app.use(morgan('dev'))
 
